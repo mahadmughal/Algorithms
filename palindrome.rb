@@ -30,16 +30,14 @@ def is_palindrome_using_frequency?(str)
 end
 
 def is_palindrome_using_pointers?(str)
-    while(true)
-        return true if str.nil?
-        return true if str[2].nil?
-        return true if str[0].empty? || str[-1].empty?
+    return true if str.nil?
+    return true if str[2].nil?
+    return true if str[0].empty? || str[-1].empty?
 
-        if str[0] == str[-1]
-            str = str[1..-2]
-        else
-            return false
-        end
+    if str[0] == str[-1]
+        is_palindrome?(str[1..-2])
+    else
+        return false
     end
 end
 
