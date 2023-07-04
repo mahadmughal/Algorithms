@@ -36,9 +36,9 @@ input = 'abcdfnaowefewiofewafwojfewpfewoifjfwjeaiofnwdioweanfewanfoewnfofnewainf
 beginning_time = Time.now
 substrings_using_loop(input)
 end_time = Time.now
-puts "Time elapsed using reverse method: #{(end_time - beginning_time)*1000} milliseconds"
+puts "Time elapsed using loop method: #{(end_time - beginning_time)*1000} milliseconds"
 
 beginning_time = Time.now
 substrings_using_recursion(input)
 end_time = Time.now
-puts "Time elapsed using reverse method: #{(end_time - beginning_time)*1000} milliseconds"
+puts "Time elapsed using recursive method: #{(end_time - beginning_time)*1000} milliseconds"

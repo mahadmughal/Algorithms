@@ -35,7 +35,7 @@ def is_palindrome_using_pointers?(str)
     return true if str[0].empty? || str[-1].empty?
 
     if str[0] == str[-1]
-        is_palindrome?(str[1..-2])
+        is_palindrome_using_pointers?(str[1..-2])
     else
         return false
     end
