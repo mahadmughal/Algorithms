@@ -1,5 +1,5 @@
 
-
+# find longest substring with no repeated chars ...
 def longest_substring(str, i=0, hash={}, lngst_substr='')
     return lngst_substr if str[i].nil?
 
