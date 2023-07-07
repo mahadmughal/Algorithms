@@ -1,0 +1,28 @@
+def is_anagram?(a, b)
+    a.split('').sort == b.split('').sort
+end
+
+def find_anagrams_count(a, i=0, j=1, l=nil, num_of_pairs=0)
+    
+    if l.nil?
+        l = a.length
+        return 0 if l == 1
+        find_anagrams_count(a, i, j, l)
+    elsif i < j && i < l-1
+        if j < l
+            num_of_pairs += 1 if is_anagram?(a[i].to_s, a[j].to_s)
+            find_anagrams_count(a, i, j+1, l, num_of_pairs)
+        else
+            find_anagrams_count(a, i+1, i+2, l, num_of_pairs)
+        end
+    else
+        return num_of_pairs
+    end
+end
+
+input = [25, 35, 872, 228, 53, 278, 872]
+
+beginning_time = Time.now
+puts "result: #{find_anagrams_count(input)}"
+end_time = Time.now
+puts "Time elapsed: #{(end_time - beginning_time)*1000} milliseconds"
