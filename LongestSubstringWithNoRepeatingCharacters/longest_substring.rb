@@ -7,9 +7,9 @@ def length_of_longest_substring(str, str_length=0, start=0, i=0, hash={}, l=0)
     return l if str_length-start < l
 
     prev_ind = hash[str[i]]
-    
+
     if str_length == 0
-        length_of_longest_substring(str, str.length)    
+        length_of_longest_substring(str, str.length)
     elsif prev_ind
         if str[i-1] == str[i]
             start = i
